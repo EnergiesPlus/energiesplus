@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Payconiq Settings Configuration View -->
+    <record id="acquirer_form_payconiq" model="ir.ui.view">
+        <field name="name">acquirer.form.payconiq</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.acquirer_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//group[@name="acquirer"]' position='after'>
+                <group attrs="{'invisible': [('provider', '!=', 'payconiq')]}">
+                    <field name="payconiq_merchantID"/>
+                    <field name="payconiq_secret_key"/>
+                    <field name="payconiq_callback_url"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
