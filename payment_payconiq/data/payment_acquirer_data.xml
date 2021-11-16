@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="payment_acquirer_payconiq" model="payment.acquirer">
+            <field name="name">Payconiq</field>
+            <field name="image_128" type="base64" file="payment_payconiq/static/src/img/payconiq_icon.png"/>
+            <field name="provider">payconiq</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="payconiq_form"/>
+        </record>
+    </data>
+</odoo>

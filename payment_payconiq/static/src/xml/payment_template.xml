@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-extend="payment.no_tx_found">
+        <t t-jquery='.text-center' t-operation='append'>
+            <p>This message can happen if you didn't used your default browser to make your order. If so, go back to the browser used to make the order.</p>
+        </t>
+    </t>
+</templates>
